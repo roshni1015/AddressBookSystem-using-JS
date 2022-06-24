@@ -42,8 +42,29 @@ Display()
 
 }
 
-let personContact= new Contact(
+let personContact1= new Contact(
     "Roshni","A","A1","Pune","MH",411013,9999999999,"roshni@mail.com"
 );
-console.log(personContact.Display());
+console.log(personContact1.Display());
 
+let personContact2= new Contact(
+    "Shravanthi","P","P1","Old Alwal","Tg",400003,9988776655,"shravanthi@mail.com"
+);
+let personContact3= new Contact(
+    "Amisha","B","B1","Pune","MH",411113,9944556633,"amisha@mail.com"
+);
+let personContact4= new Contact(
+    "Mahesh","R","R1","Pune","MH",422223,9922334455,"mahesh@mail.com"
+);
+
+console.log(personContact1.Display());
+console.log(personContact2.Display());
+console.log(personContact3.Display());
+console.log(personContact4.Display());
+
+var map1= new Map();
+map1.set(1,personContact1);
+map1.set(2,personContact2);
+map1.set(3,personContact3);
+map1.set(4,personContact4);
+console.log(map1.size);
