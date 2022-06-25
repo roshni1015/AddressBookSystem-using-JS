@@ -123,15 +123,41 @@ function deleteContact(){
         }
     }
 }
+function display(){
+    for(let i=0;i<array.length;i++){
+        console.log(array[i]);
+    }
+}
 function countOfContacts(data) {
     return data.reduce((sum, a) => sum + 1, 0);
 }
+function dupicateCheckInAddContacts(){
+    var flag=0;
+    var contact = new Contact();
+    contact.firstName = prompt("Please enter the FirstName :");
+    for(let i=0;i<array.length;i++){
+        if(array[i].firstName === contact.firstName){
+            flag=1;
+            console.log("Contact with this first name already exists!");
+        }
+    }
+    if(flag===0){
+        contact.lastName = prompt("Please enter the LastName :");
+        contact.address = prompt("Please enter the Address :");
+        contact.city = prompt("Please enter the City :");
+        contact.state = prompt("Please enter the State :");
+        contact.zip = prompt("Please enter the Zip :");
+        contact.phoneNumber = prompt("Please enter the phoneNumber :");
+        contact.email = prompt("Please enter the EmailID :");
+        array.push(contact);
+    }
+}
 while(true){
     console.log("Please choose the option");
-    var option = prompt("1)Display Contacts in AddressBook. \n2)Add Details in AddressBook\n3)Edit Contact using FirstName\n4)Delete contact \n5)Count using Reduce\n");
+    var option = prompt("1)Display Contacts in AddressBook. \n2)Add Details in AddressBook\n3)Edit Contact using FirstName\n4)Delete contact \n5)Count using Reduce \n6)Ensure no duplicate entries\n");
     switch(option){
         case "1":
-            Display();
+            display();
             break;
         case "2":
             addDetails();
@@ -144,7 +170,13 @@ while(true){
             break;
         case "5":
             var coun = countOfContacts(array);
-            console.log("Number of Contacts : " + coun);
+            console.log(coun);
+            break;
+        case "6":
+            dupicateCheckInAddContacts();
+            break;
+        default:
+            console.log("Please choose the correct option")
             break;
     }
 }
