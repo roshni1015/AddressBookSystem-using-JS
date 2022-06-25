@@ -115,6 +115,11 @@ function editContact(){
         }
     }
 }
+function display(){
+    for(let i=0;i<array.length;i++){
+        console.log(array[i]);
+    }
+}
 while(true){
     console.log("Please choose the option");
     var option = prompt("1)Display Contacts in AddressBook. \n2)Add Details in AddressBook\n3) Edit Contact using FirstName \n");
