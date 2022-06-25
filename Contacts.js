@@ -125,7 +125,7 @@ while(true){
     var option = prompt("1)Display Contacts in AddressBook. \n2)Add Details in AddressBook\n3) Edit Contact using FirstName \n");
     switch(option){
         case "1":
-            Display();
+            display();
             break;
         case "2":
             addDetails();
