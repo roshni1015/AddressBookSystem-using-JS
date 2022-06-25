@@ -41,6 +41,6 @@ Display()
 
 }
 
-let personContact= new Contact("omkar","B","A1","Ratnagiri","MH",415000,7778889995,"omkarb@mail.com");
+let personContact= new Contact("Roshni","A","A1","Pune","MH",411013,9999999999,"roshni@mail.com");
 
 console.log(personContact.Display());
