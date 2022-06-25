@@ -42,5 +42,22 @@ Display()
 }
 
 let personContact= new Contact("Roshni","A","A1","Pune","MH",411013,9999999999,"roshni@mail.com");
+let personContact1= new Contact("Mahesh","B","B1","Pune","MH",411013,9999999999,"mahesh@mail.com");
+let personContact2= new Contact("Lavnya","C","C1","Banglore","KT",411013,9999999999,"lavnaya@mail.com");
+let personContact3= new Contact("Vivek","D","D1","Mumbai","MH",411013,9999999999,"vivek@mail.com");
+
 
 console.log(personContact.Display());
+console.log(personContact1.Display());
+console.log(personContact2.Display());
+console.log(personContact3.Display());
+
+var map1= new Map();
+map1.set(1,personContact);
+map1.set(2,personContact1);
+map1.set(3,personContact2);
+map1.set(4,personContact3);
+
+console.log("Number of Person Contacts in AddressBook : " +map1.size);
+
+
