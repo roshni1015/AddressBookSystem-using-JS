@@ -47,10 +47,10 @@ let personContact2= new Contact("Lavnya","C","C1","Banglore","KT",411013,9999999
 let personContact3= new Contact("Vivek","D","D1","Mumbai","MH",411013,9999999999,"vivek@mail.com");
 
 
-console.log(personContact.Display());
+/*console.log(personContact.Display());
 console.log(personContact1.Display());
 console.log(personContact2.Display());
-console.log(personContact3.Display());
+console.log(personContact3.Display());*/
 
 var map1= new Map();
 map1.set(1,personContact);
@@ -58,7 +58,7 @@ map1.set(2,personContact1);
 map1.set(3,personContact2);
 map1.set(4,personContact3);
 
-console.log("Number of Person Contacts in AddressBook : " +map1.size);
+//console.log("Number of Person Contacts in AddressBook : " +map1.size);
 
 var array=[];
 array.push(personContact);
@@ -123,9 +123,12 @@ function deleteContact(){
         }
     }
 }
+function countOfContacts(data) {
+    return data.reduce((sum, a) => sum + 1, 0);
+}
 while(true){
     console.log("Please choose the option");
-    var option = prompt("1)Display Contacts in AddressBook. \n2)Add Details in AddressBook\n3)Edit Contact using FirstName\n4)Delete contact \n");
+    var option = prompt("1)Display Contacts in AddressBook. \n2)Add Details in AddressBook\n3)Edit Contact using FirstName\n4)Delete contact \n5)Count using Reduce\n");
     switch(option){
         case "1":
             Display();
@@ -139,6 +142,9 @@ while(true){
         case "4":
             deleteContact();
             break;
+        case "5":
+            var coun = countOfContacts(array);
+            console.log("Number of Contacts : " + coun);
+            break;
     }
 }
-
